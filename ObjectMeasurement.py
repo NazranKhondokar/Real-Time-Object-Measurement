@@ -14,8 +14,9 @@ hP= 297 *scale
 ###################################
 
 while True:
-    if webcam:success,img = cap.read()
-    else: img = cv2.imread(path)
+    # if webcam:success,img = cap.read()
+    # else: img = cv2.imread(path)
+    img = cv2.imread(path)
 
     imgContours , conts = utlis.getContours(img,minArea=50000,filter=4)
     if len(conts) != 0:
